@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*轮播图*/
+.slide-box{
+    position: relative;
+    width: 1150px;
+    height: 500px;
+    display: block;
+    overflow: hidden;
+    left: 8%;
+}
+#slide-image{
+    position: absolute;
+    width: 8500px;
+    left: 0;
+
+}
+#slide-image li{
+    float: left;
+
+
+}
+
+/*圆圈按钮*/
+.circle-btn{
+    position: absolute;
+    width: 100%;
+    bottom: 18px;
+    left:0;
+    text-align: center;
+    font-size: 0;       /*让li标签没有间隙*/
+    cursor: pointer;
+
+}
+.circle-btn li{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 2px gray solid;
+    background-color: gray;
+
+}
+/*当前的圆圈按钮*/
+.circle-btn .circle-btn-on{
+    background-color: #fcfcfc;
+}
+
+/*左右按钮*/
+.slide-btn{
+    position: absolute;
+    width: 45px;
+    height: 80px;
+    line-height: 80px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    text-align: center;
+    top:50%;
+    margin-top: -40px;
+    font-size: 68px;
+    font-family: "宋体";       /*防止火狐浏览器默认黑体太粗*/
+    cursor: pointer;
+    display: none;
+}
+.slide-box:hover .slide-btn{
+    display: block;
+}
+.slide-btn :hover{
+    display: block;
+}
+.btn_l{
+    left: 100px;
+}
+.btn_r{
+    right: 100px;
+}
