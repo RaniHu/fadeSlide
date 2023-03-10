@@ -99,6 +99,8 @@
       var myFullpage = new fullpage("#fullpage", {
         licenseKey: ".",
         controlArrows: true,
+        continuousVertical: true,
+
       });
       $(document).on('click', '.arrow-left', function(){
         fullpage_api.moveSectionUp();
