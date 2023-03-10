@@ -1,31 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>焦点轮播图</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="js/jquery-1.9.1.js"></script>
-    <script src="js/event-fade.js"></script>
-</head>
-<body>
-    <!-- 轮播图-->
-    <div class="slide-box">
-        <ul id="slide-image">
-            <li><a href="#"><img src="img/6.jpg"></a></li>
-            <li><a href="#"><img src="img/4.jpg"></a></li>
-            <li><a href="#"><img src="img/2.jpg"></a></li>
-            <li><a href="#"><img src="img/3.jpg"></a></li>
-            <li><a href="#"><img src="img/5.jpg"></a></li>
-            <li><a href="#"><img src="img/8.jpg"></a></li>
-        </ul>
-        <!-- 左右按钮-->
-        <div class="slide-btn btn_l">&lt;</div>
-        <div class="slide-btn btn_r">&gt;</div>
-        <!-- 圆圈按钮-->
-        <ul class="circle-btn">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>moon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Resource-type" content="Document" />
+    <link rel="stylesheet" type="text/css" href="../dist/fullpage.css" />
+    <script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+    <style>
+      #fullpage {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+      }
+      .my-arrow {
+        font-size: 2em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+      }
+      .arrow-left {
+        left: 0.2em;
+      }
+      .arrow-right {
+        right: 0.2em;
+      }
+      .section {
+        position: relative;
+        background: url("./imgs/bg.png") no-repeat center;
+        background-size: cover;
+        color: #2c3e50;
+        text-align: center;
+      }
 
-        </ul>
+      h4 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      h5 {
+        font-size: 13px;
+        margin: 20px 0 20px 30px;
+        font-weight: 500;
+      }
+      p {
+        font-size: 15px;
+        line-height: 38px;
+      }
+
+      .fp-watermark {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="my-arrow arrow-left"><i class="fas fa-arrow-alt-circle-left"></i></i></div>
+    <div class="my-arrow arrow-right"><i class="fas fa-arrow-alt-circle-right"></i></div>
+    <div id="fullpage">
+      <div class="section" id="section0">
+        <div class="part-1 content">
+          <h4>中秋月</h4>
+          <h5>（宋）苏轼</h5>
+          <p>暮云收尽溢清寒</p>
+          <p>银汉无声转玉盘</p>
+          <p>此生此夜不长好</p>
+          <p>明月明年何处看</p>
+        </div>
+      </div>
+      <div class="section" id="section1">
+        <div class="part-2 content">
+          <h4>十五夜望月</h4>
+          <h5>（唐）王建</h5>
+          <p>中庭地白树栖鸦</p>
+          <p>冷露无声湿桂花</p>
+          <p>今夜月明人尽望</p>
+          <p>不知秋思落谁家</p>
+        </div>
+      </div>
+      <div class="section" id="section2">
+        <div class="part-3 content">
+          <h4>天竺寺八月十五日夜桂子</h4>
+          <h5>（唐）皮日休</h5>
+          <p>玉颗珊珊下月轮</p>
+          <p>殿前拾得露华新</p>
+          <p>至今不会天中事</p>
+          <p>应是嫦娥掷与人</p>
+        </div>
+      </div>
     </div>
 
-</body>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <script type="text/javascript" src="../dist/fullpage.js"></script>
+    <script type="text/javascript" src="examples.js"></script>
+    <script type="text/javascript">
+      var myFullpage = new fullpage("#fullpage", {
+        licenseKey: ".",
+        controlArrows: true,
+        continuousVertical: true,
+
+      });
+      $(document).on('click', '.arrow-left', function(){
+        fullpage_api.moveSectionUp();
+      });
+      $(document).on('click', '.arrow-right', function(){
+        fullpage_api.moveSectionDown();
+      });
+  
+    </script>
+  </body>
 </html>
