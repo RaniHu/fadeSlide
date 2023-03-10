@@ -5,7 +5,7 @@
     <title>moon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Resource-type" content="Document" />
-    <link rel="stylesheet" type="text/css" href="../dist/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.18/fullpage.css" />
     <script
   src="https://code.jquery.com/jquery-3.6.4.js"
   integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
@@ -44,12 +44,12 @@
       }
       h5 {
         font-size: 13px;
-        margin: 10px 0 10px 30px;
+        margin: 20px 0 20px 30px;
         font-weight: 500;
       }
       p {
         font-size: 15px;
-        line-height: 34px;
+        line-height: 38px;
       }
 
       .fp-watermark {
@@ -94,13 +94,12 @@
     </div>
 
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.18/fullpage.min.js"></script>
+    <script type="text/javascript" src="../dist/fullpage.js"></script>
+    <script type="text/javascript" src="examples.js"></script>
     <script type="text/javascript">
       var myFullpage = new fullpage("#fullpage", {
         licenseKey: ".",
         controlArrows: true,
-        continuousVertical: true,
-
       });
       $(document).on('click', '.arrow-left', function(){
         fullpage_api.moveSectionUp();
